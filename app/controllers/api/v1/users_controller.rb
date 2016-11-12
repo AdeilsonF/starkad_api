@@ -1,6 +1,7 @@
 module Api
   module V1
     class UsersController < ApiController
+      before_action :auth_with_token!, only: [:update, :destroy]
       respond_to :json
       skip_before_action :auth_with_token!
 
@@ -19,7 +20,7 @@ module Api
       end
 
       def update
-        user = find_user
+        user = current_user
 
         if user.update(user_params)
           render json: user, status: 200, location: [:api, user]
@@ -29,8 +30,7 @@ module Api
       end
 
       def destroy
-        user = find_user
-        user.destroy
+        current_user.destroy
         head 204
       end
 

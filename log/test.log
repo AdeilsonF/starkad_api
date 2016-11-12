@@ -18300,3 +18300,1426 @@ Completed 204 No Content in 4ms (ActiveRecord: 0.6ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "candice@grimes.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_Jqg-QvojX69h-yiyh1u"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "candice@grimes.biz"], ["encrypted_password", "$2a$04$h.coGolyaByI3I0GHGlZkex03vvNEmjO/wrbjl6rxsueRhBQ7O/T6"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "_Jqg-QvojX69h-yiyh1u"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"194", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 194], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gerhard_ernser@mrazbergnaum.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "arMVz-eVJa2VYMLEwdYj"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "gerhard_ernser@mrazbergnaum.ca"], ["encrypted_password", "$2a$04$A.wmzGif8Ncwb8kWJcOhQejydkOyCSqR6BPWQDk/kTLhjS4jiLNO6"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "arMVz-eVJa2VYMLEwdYj"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"195", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 195], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"rusty@turcotte.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rusty@turcotte.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wVVGFcXsQ5xcxg6XsGoF"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rusty@turcotte.us"], ["encrypted_password", "$2a$04$9NTo5Rh38tR5nGRm7m1a6u53oodam8SntLhCikzPw75tVkccUekRq"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "wVVGFcXsQ5xcxg6XsGoF"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.0ms | ActiveRecord: 2.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"yvonne@schultz.name", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yvonne@schultz.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "C-kf-cHveLuaUcApQVyZ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "yvonne@schultz.name"], ["encrypted_password", "$2a$04$LOhO4KOBee7lOGbRBhq1s.98NZWNKQdyD.Al.1CoaSf2txI5ZUjeK"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "C-kf-cHveLuaUcApQVyZ"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 0.7ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 12ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "malvina.morar@bahringerhaley.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Y9Ft4ZyPSbzQwwRpkoZr"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "malvina.morar@bahringerhaley.com"], ["encrypted_password", "$2a$04$syNSvfkXRKgZtlZQqHaHSesy/L7taDUUBpgsV.L/UEEgS1ehSWOrG"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "Y9Ft4ZyPSbzQwwRpkoZr"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"198"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bud@lowe.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "VNX_G6gjLrQfEsGJsKQa"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bud@lowe.ca"], ["encrypted_password", "$2a$04$pZz8HUTLUYEIFJnetRBPxe8vHRs2uQe4AN9RqCvytGNvo3VQA.PkK"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "VNX_G6gjLrQfEsGJsKQa"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"199"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "estelle_okeefe@predovictillman.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "sj-vQ9fS3PLyUF38-u1B"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "estelle_okeefe@predovictillman.biz"], ["encrypted_password", "$2a$04$KqgnpTR2FsYc/LNWcgYZLOJ5ry8GIqSt9nxvgUGBe6hOq4yrQ99tS"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "sj-vQ9fS3PLyUF38-u1B"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"200"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gerald.orn@trompfranecki.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "sGTKev2-NcjXxiQ1zRJP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "gerald.orn@trompfranecki.co.uk"], ["encrypted_password", "$2a$04$mUypqVRTANGK5S8BOcZAHuEsUIuuoLFr5zl7sQ34qvwWfOv3pkDoq"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "sGTKev2-NcjXxiQ1zRJP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"201"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "virginia@kuhic.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "XPTo5dBykvxBKRQzQHqV"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "virginia@kuhic.info"], ["encrypted_password", "$2a$04$vgGUqyuGxCJRYsrUhryXu.Sa5EWjJZ9mqLnu/msGT0xeJyQ64oNBi"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "XPTo5dBykvxBKRQzQHqV"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"202"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "greyson@collinsmueller.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "2qrUixKSnsJCQEdoy-u8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "greyson@collinsmueller.info"], ["encrypted_password", "$2a$04$sA1wXGfrKM5cddHDA4QMtOml1FatdWNXapmjOvYzozCijzjCF7neC"], ["created_at", 2016-11-12 01:25:47 UTC], ["updated_at", 2016-11-12 01:25:47 UTC], ["auth_token", "2qrUixKSnsJCQEdoy-u8"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"203", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 203], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 203]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 203]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 20ms (ActiveRecord: 2.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kaden.shields@will.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "qP_yAA4ykif2tnfuJhWQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kaden.shields@will.name"], ["encrypted_password", "$2a$04$5sh78.loRyVUFS.yi5MLjOvCqvvNpDGf6DUAYAM2cSHE2RhlkU7E."], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "qP_yAA4ykif2tnfuJhWQ"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"204", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 204], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rafaela_jenkins@hills.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "fxbsJ523vMft9RVQbS9Y"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rafaela_jenkins@hills.com"], ["encrypted_password", "$2a$04$2vq8r0KFokkhQg/O05VDnOUHY54F4WSxm9fTsYEipokUAq7eleorK"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "fxbsJ523vMft9RVQbS9Y"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"205", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 205], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"justus_tillman@kreiger.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "justus_tillman@kreiger.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "VoKVxJkXLxLqmJsZS1hp"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "justus_tillman@kreiger.biz"], ["encrypted_password", "$2a$04$iGEuLnFbwmfgR4ZDugRKDOBpr6mT5lj16LeU7CMXwyw4sceQHwJT2"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "VoKVxJkXLxLqmJsZS1hp"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.0ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"genoveva_ferry@walker.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "genoveva_ferry@walker.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-7hdjLjjKXEM_bsxxgVR"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "genoveva_ferry@walker.us"], ["encrypted_password", "$2a$04$.nanvwmHT8Z13RbFmk3mN.oUXgkQBoAHK3TG1xesKl5CZKWVMBmOC"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "-7hdjLjjKXEM_bsxxgVR"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 13ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "antone.padberg@kuphalschowalter.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BZ6Fjtvj5yuewpT4iHNX"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "antone.padberg@kuphalschowalter.biz"], ["encrypted_password", "$2a$04$OWfhDpgj6ZXUo4WnKJ0zg.5gB9Lbk5rV3iilmekZt5RHgCP0JAIR2"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "BZ6Fjtvj5yuewpT4iHNX"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"208"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BZ6Fjtvj5yuewpT4iHNX"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 208], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "BZ6Fjtvj5yuewpT4iHNX"], ["id", 208], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:26:29 UTC], ["id", 208]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stacy.hirthe@walshlowe.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zjXAbUND1oZ7Bp9HBKxy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "stacy.hirthe@walshlowe.ca"], ["encrypted_password", "$2a$04$iO3C3z84ra8teGbCFiyebOU336dIS38kNNHhQ9p54jUWp4qhmH3JS"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "zjXAbUND1oZ7Bp9HBKxy"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"209"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zjXAbUND1oZ7Bp9HBKxy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 209], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "zjXAbUND1oZ7Bp9HBKxy"], ["id", 209], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:26:29 UTC], ["id", 209]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "blanca@satterfield.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "fGDPbdWsC4XiCxibshiy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "blanca@satterfield.name"], ["encrypted_password", "$2a$04$TBfHcoxEmTPaYAvisIuPOewYn8aZRWsFS1nEYpHwjj8InFzxw7ubC"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "fGDPbdWsC4XiCxibshiy"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"210"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "fGDPbdWsC4XiCxibshiy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "fGDPbdWsC4XiCxibshiy"], ["id", 210], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "micaela@king.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ogA1zichS4sCU664kM8X"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "micaela@king.us"], ["encrypted_password", "$2a$04$YdAV8C1vy4a8HrRwzzoKOeB82mA9cad67pkyX6NfN5hQ3nh51Rxii"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "ogA1zichS4sCU664kM8X"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"211"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ogA1zichS4sCU664kM8X"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "ogA1zichS4sCU664kM8X"], ["id", 211], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "edward@rodriguez.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "vgjD_9vv9XLQmzmabfoJ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "edward@rodriguez.info"], ["encrypted_password", "$2a$04$85UFAS9pz9W98p3P/jLmSOpYbf4fcud60VXnM/AY2WZJBwrWtu82m"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "vgjD_9vv9XLQmzmabfoJ"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"212"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "vgjD_9vv9XLQmzmabfoJ"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "vgjD_9vv9XLQmzmabfoJ"], ["id", 212], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "augusta@hodkiewicz.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "PELiLAi8BzxMiDPYP_2d"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "augusta@hodkiewicz.name"], ["encrypted_password", "$2a$04$ojPmbsxhhwBETzJiJdHWG.yVGyjqMb2Ujc4KeV6Ay4spdWF.RvM.G"], ["created_at", 2016-11-12 01:26:29 UTC], ["updated_at", 2016-11-12 01:26:29 UTC], ["auth_token", "PELiLAi8BzxMiDPYP_2d"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"213", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 213], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 213]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 213]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 20ms (ActiveRecord: 2.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sanford@wilkinsonvolkman.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "y7dypGvxk6sn26f4V_AX"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "sanford@wilkinsonvolkman.com"], ["encrypted_password", "$2a$04$O19Fl2taDjlRjt5bQzXQqeGHb8GgmLOxAl42myb64KKMByiBKgrsa"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "y7dypGvxk6sn26f4V_AX"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"214", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 214], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dena.walker@lubowitz.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "vwxNgsj-byT6MqaHHm27"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "dena.walker@lubowitz.us"], ["encrypted_password", "$2a$04$TnzhYoXwpbNL4mXxp0kxUe5RGLcB.V3GtRqxXkcFxjiphpO0ykdEO"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "vwxNgsj-byT6MqaHHm27"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"215", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 215], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"augustine.breitenberg@zemlak.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "augustine.breitenberg@zemlak.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "fwjqfV7QsyxoTkDho2rp"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "augustine.breitenberg@zemlak.ca"], ["encrypted_password", "$2a$04$cUO/m.61uZNbA1Ddc24BSOICPCtrl/8ql1PxuWe/wotpBS/W1VXbO"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "fwjqfV7QsyxoTkDho2rp"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"maxime@dach.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maxime@dach.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "RSLQbjX-zA6Hg2bAZS9b"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "maxime@dach.biz"], ["encrypted_password", "$2a$04$7t40q7nHJzTMvZzkAgFZUO6v1G4e5u2OjqHqYPpUjsjlIoaj5W7/G"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "RSLQbjX-zA6Hg2bAZS9b"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 0.4ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "summer_bernier@schillernitzsche.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "obZbvbDTyc4ykxzz88ZU"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "summer_bernier@schillernitzsche.name"], ["encrypted_password", "$2a$04$AQQtTW9NZr.ka.z5BUskRes/lzPsrwgcs/cGuwsymUUG88bTgAIQO"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "obZbvbDTyc4ykxzz88ZU"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"218"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "obZbvbDTyc4ykxzz88ZU"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 218], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "obZbvbDTyc4ykxzz88ZU"], ["id", 218], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:28:15 UTC], ["id", 218]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rosalia_dach@schillertreutel.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SZHtnZ_bsvPaQRxiozX7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rosalia_dach@schillertreutel.info"], ["encrypted_password", "$2a$04$EfwlnxnTtcUJoxD0o4nPv.eGqTlpSqoTDejpSTLLmTy1Daa5gqQCO"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "SZHtnZ_bsvPaQRxiozX7"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"219"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SZHtnZ_bsvPaQRxiozX7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 219], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "SZHtnZ_bsvPaQRxiozX7"], ["id", 219], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:28:15 UTC], ["id", 219]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "adalberto.hettinger@larson.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "u-ix1qUzPjf-iu_aSF8p"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "adalberto.hettinger@larson.name"], ["encrypted_password", "$2a$04$oMNWaXpoqNizSaiVKM6uQuWumsjkTp.YqJmutz.bvurThzvnsLToS"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "u-ix1qUzPjf-iu_aSF8p"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"220"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "u-ix1qUzPjf-iu_aSF8p"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "u-ix1qUzPjf-iu_aSF8p"], ["id", 220], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "madeline@mcculloughberge.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "PqsQjEQ8Qe-agj-VJtdb"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "madeline@mcculloughberge.info"], ["encrypted_password", "$2a$04$oT6aJ4J01.p/On0HXqR9kOy1XRF4q6klPvSu0bmaRs2Xy8I0s8tXO"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "PqsQjEQ8Qe-agj-VJtdb"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"221"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "PqsQjEQ8Qe-agj-VJtdb"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "PqsQjEQ8Qe-agj-VJtdb"], ["id", 221], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stanford.rippin@franeckidare.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "GnePheHTsssygbWpG1A8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "stanford.rippin@franeckidare.info"], ["encrypted_password", "$2a$04$88JeqlOpsSmeVTV55jnkfOedfppt8vRbAuA67mIrxG3fRBd55uS7C"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "GnePheHTsssygbWpG1A8"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"222"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "GnePheHTsssygbWpG1A8"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "GnePheHTsssygbWpG1A8"], ["id", 222], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abigayle_nitzsche@hagenes.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ixMQjvRsGT2yBos4gyb7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "abigayle_nitzsche@hagenes.us"], ["encrypted_password", "$2a$04$udD9.uh1r815wj5ogM5cOuoHBmo3VVMdGEmwG.Vm1U442R/vXK8/y"], ["created_at", 2016-11-12 01:28:15 UTC], ["updated_at", 2016-11-12 01:28:15 UTC], ["auth_token", "ixMQjvRsGT2yBos4gyb7"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"223", "user"=>{}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rosamond@maggiolockman.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yjwBdsbaNFgsXtkEcepg"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rosamond@maggiolockman.co.uk"], ["encrypted_password", "$2a$04$l9bJsGHnygU25NiO8KbLxOFowARGwT44LVLs.Ct9JpRsSvPUf6Ufu"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "yjwBdsbaNFgsXtkEcepg"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"224", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 224], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zander_leuschke@kessler.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zTx8-ZYxgdHB6Ucf9Xe9"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "zander_leuschke@kessler.biz"], ["encrypted_password", "$2a$04$H27onuzPXiaNz4lxgxRw7uOTFh/PqmPfwgbBUeyh7C6ei9WOqzsYC"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "zTx8-ZYxgdHB6Ucf9Xe9"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"225", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 225], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"dina@buckridge.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "dina@buckridge.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "7XwusdrFMsnefCYdFuiz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "dina@buckridge.ca"], ["encrypted_password", "$2a$04$aWYXfRf65kZj.W2pq.zeweUTrj3B7W1ZziomTrK3zhwlTz.KyCQBa"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "7XwusdrFMsnefCYdFuiz"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.6ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"zoie@beckerbosco.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zoie@beckerbosco.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "TCPMs7Hpag6A-71_GxGN"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "zoie@beckerbosco.biz"], ["encrypted_password", "$2a$04$gPumBVySGSOBaMKeKzqlWeHMAsqtmWom11Ir1G27vjEJ4FOxOvEj6"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "TCPMs7Hpag6A-71_GxGN"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "willis@anderson.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zCu8mD4tLnjCH1sj7afd"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "willis@anderson.us"], ["encrypted_password", "$2a$04$9mjX70sH0554ASwbwqUJjuvGlSJnvnW95ltrO8dmJnv6yvOHju9HC"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "zCu8mD4tLnjCH1sj7afd"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"228"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zCu8mD4tLnjCH1sj7afd"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 228], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "zCu8mD4tLnjCH1sj7afd"], ["id", 228], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:29:07 UTC], ["id", 228]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gaylord.mccullough@heidenreich.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "nhm8hg82cvxpJWU4LnVK"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "gaylord.mccullough@heidenreich.info"], ["encrypted_password", "$2a$04$yeswv4HZgqckiXYnggA5AOKVF48qOAfw7A2TpEQd1HdmXUI5HlM4W"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "nhm8hg82cvxpJWU4LnVK"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"229"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "nhm8hg82cvxpJWU4LnVK"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 229], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "nhm8hg82cvxpJWU4LnVK"], ["id", 229], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:29:07 UTC], ["id", 229]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vallie@crooksryan.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BsP8J_KM-tza82k6nTij"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "vallie@crooksryan.co.uk"], ["encrypted_password", "$2a$04$fIMIFBd97ZufaZ5L0r1fUuqeGDq3HvBuiKkwroRfKav/v7t5F4/Le"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "BsP8J_KM-tza82k6nTij"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"230"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BsP8J_KM-tza82k6nTij"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "BsP8J_KM-tza82k6nTij"], ["id", 230], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fidel.bernhard@gaylordcollier.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-sUyVz8NiXzx55P4mjAp"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "fidel.bernhard@gaylordcollier.co.uk"], ["encrypted_password", "$2a$04$S9nTcF5kx0QcFqu3p4Em9uIFRZ/XV.d5vO1EqhqohXjkdTNySKEZ."], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "-sUyVz8NiXzx55P4mjAp"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"231"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-sUyVz8NiXzx55P4mjAp"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "-sUyVz8NiXzx55P4mjAp"], ["id", 231], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "liliana.bosco@vonruedenabbott.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ws8U8JpAxjDrPkzJxsQs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "liliana.bosco@vonruedenabbott.info"], ["encrypted_password", "$2a$04$e1/cy4cnwBhvYyUEWLKKJ.wy29BaJfeDdklnmgadUu0FV8FvwBC0G"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "ws8U8JpAxjDrPkzJxsQs"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"232"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ws8U8JpAxjDrPkzJxsQs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "ws8U8JpAxjDrPkzJxsQs"], ["id", 232], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 2.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marshall@conroy.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "X1PLzUn_y3YVJWXGFBjP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "marshall@conroy.biz"], ["encrypted_password", "$2a$04$G5OSZnj3yFSD8KDJj9lU0.SHhbdpPEbEANIlubbeJfx1vgC8lJqOa"], ["created_at", 2016-11-12 01:29:07 UTC], ["updated_at", 2016-11-12 01:29:07 UTC], ["auth_token", "X1PLzUn_y3YVJWXGFBjP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"233", "user"=>{}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brandy@corkerymurazik.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "HMBBa-xoYVtx83Hiehox"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "brandy@corkerymurazik.ca"], ["encrypted_password", "$2a$04$aVTLgAztkzm7xBGN6rCpFOfhvmEQsucKVsY5ZvMCz5pArh1Y6oZk."], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "HMBBa-xoYVtx83Hiehox"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"234", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 234], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marie@kulas.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "JF6wBSxCxU8KD6TTteLW"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "marie@kulas.co.uk"], ["encrypted_password", "$2a$04$fOJh6HYonmO/jP8Vew1e1.A36rFzKFnB2pz5EEP5nEqRNUIxkP7YW"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "JF6wBSxCxU8KD6TTteLW"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"235", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 235], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"nayeli_macejkovic@hilllcremin.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nayeli_macejkovic@hilllcremin.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "R4_f9LT7ycNZXSStXHBH"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "nayeli_macejkovic@hilllcremin.us"], ["encrypted_password", "$2a$04$eDoPZxmaqyhtnP2Y66gg6OI4bc/mbiuyng68O75prUlHpXaDWS8ea"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "R4_f9LT7ycNZXSStXHBH"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.1ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"cali@littel.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cali@littel.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "UvUNRjfLe3sTmk_ygt36"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "cali@littel.us"], ["encrypted_password", "$2a$04$G.vK3kUcYAxbKR7MViTg0OtuRu80c1SsThW0fdkOmchs8t2dUWEV."], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "UvUNRjfLe3sTmk_ygt36"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 6ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ken@harris.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "tE6iymVxH1GyHM5bzc4m"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ken@harris.info"], ["encrypted_password", "$2a$04$YYGHnWH8PH0Oa5fmgesiwOUuHDkmsPu0MBwLyq.SKgjTyIdXeHL7C"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "tE6iymVxH1GyHM5bzc4m"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"238"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "tE6iymVxH1GyHM5bzc4m"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 238], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "tE6iymVxH1GyHM5bzc4m"], ["id", 238], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:30:51 UTC], ["id", 238]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "monserrate@anderson.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SoxCxtMbKHZxnw8QWHZr"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "monserrate@anderson.com"], ["encrypted_password", "$2a$04$A/jqz/UksNIwxHUE.jGzwecJJhXM7dQO1QDdfygkQ57qo/ZE9ruVu"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "SoxCxtMbKHZxnw8QWHZr"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"239"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SoxCxtMbKHZxnw8QWHZr"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 239], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "SoxCxtMbKHZxnw8QWHZr"], ["id", 239], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:30:51 UTC], ["id", 239]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.7ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "leon@faybayer.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "NEdd_9kd4qzBGoDqWiqs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "leon@faybayer.co.uk"], ["encrypted_password", "$2a$04$tu3aIOOZYfxx5iCZQ62GOu/43XKw2FrpMr/FFW3moBDADtfjuO3xi"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "NEdd_9kd4qzBGoDqWiqs"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"240"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "NEdd_9kd4qzBGoDqWiqs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "NEdd_9kd4qzBGoDqWiqs"], ["id", 240], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sterling@jones.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "keq1qZzotsdC-AXF2P5a"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "sterling@jones.co.uk"], ["encrypted_password", "$2a$04$juyeuMcb2uNEHeLhzYvIPeHc5ho.7U8rpmNDTlO38Ar1YkX9B2ASy"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "keq1qZzotsdC-AXF2P5a"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"241"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "keq1qZzotsdC-AXF2P5a"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "keq1qZzotsdC-AXF2P5a"], ["id", 241], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "oran@russel.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "cZxr7BYzmjqJRMtyevf4"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "oran@russel.us"], ["encrypted_password", "$2a$04$0b4CZCX9vq2NtiFHGMjy3uV0cr24qx2JtL1CJlOo2Crm./awpV9g6"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "cZxr7BYzmjqJRMtyevf4"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"242"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "cZxr7BYzmjqJRMtyevf4"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "cZxr7BYzmjqJRMtyevf4"], ["id", 242], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "omer_grady@durganferry.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "skVHR-Azzdds93uaoKWN"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "omer_grady@durganferry.biz"], ["encrypted_password", "$2a$04$wiOyMHGdWxW64olWsvXPi.kvK79RLBFowaHDXzz9ZpuqPRYZsFkDy"], ["created_at", 2016-11-12 01:30:51 UTC], ["updated_at", 2016-11-12 01:30:51 UTC], ["auth_token", "skVHR-Azzdds93uaoKWN"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jett_conroy@nicolasolson.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Pu-1MKJb2mM2tFVCebw_"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jett_conroy@nicolasolson.co.uk"], ["encrypted_password", "$2a$04$H.GXhME9ZTnOGXIt9M0o7OGO/t2pH4wS7/MmK5fhBcNLTKX4pJD2q"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "Pu-1MKJb2mM2tFVCebw_"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"244", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 244], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rusty@dickens.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "nhaG4w1oFKaRSYhSLxsP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rusty@dickens.name"], ["encrypted_password", "$2a$04$P3zuxiF36P5qznS48eRKseYnje4qFiOmkPiVRRNWUytQ/KwkuKQUK"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "nhaG4w1oFKaRSYhSLxsP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"245", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 245], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"linwood@haagbahringer.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "linwood@haagbahringer.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "xxseVJh1sgouniexbqpC"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "linwood@haagbahringer.us"], ["encrypted_password", "$2a$04$VwgUUQ4lCf.Y21OLfu06jOd/./zaLpSZlFd3NW9Aq9dxfIYI7JmRa"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "xxseVJh1sgouniexbqpC"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 2.0ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"eva_hickle@grahamokeefe.info", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eva_hickle@grahamokeefe.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-jts_jLfaDuCmE6sAShc"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "eva_hickle@grahamokeefe.info"], ["encrypted_password", "$2a$04$upZV0G8MTFt9cXqFByPqp.W4rrzBcnuw09oIpi1QN2oLgL7/dWxRS"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "-jts_jLfaDuCmE6sAShc"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 1.1ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "frederik@renner.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "8Ajy2LGAkYEJ8zPLS96h"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "frederik@renner.com"], ["encrypted_password", "$2a$04$F..TOe4hiI6rnL.MLFgS/upgNZe37xhBww9wZAYe/1LRM6Pr4wD0S"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "8Ajy2LGAkYEJ8zPLS96h"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"248"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "8Ajy2LGAkYEJ8zPLS96h"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 248], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "8Ajy2LGAkYEJ8zPLS96h"], ["id", 248], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:32:23 UTC], ["id", 248]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "era_dooley@brekke.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "tzowaHNkUb5fqgxSEx6x"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "era_dooley@brekke.ca"], ["encrypted_password", "$2a$04$Ebihl7BWtxDjjLvQux3I8eXnr5f4MQmQ1ERStU0Eeiom8YbOxxBz2"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "tzowaHNkUb5fqgxSEx6x"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"249"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "tzowaHNkUb5fqgxSEx6x"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 249], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "tzowaHNkUb5fqgxSEx6x"], ["id", 249], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:32:23 UTC], ["id", 249]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "barbara_dicki@orn.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "KWCzrWFWLV7TN_6VPUwR"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "barbara_dicki@orn.co.uk"], ["encrypted_password", "$2a$04$Q1ByjKYWjIi/oCzQnCqzLOpQdzpyJRZIbH2Ug852.ovMQmcFYo9X."], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "KWCzrWFWLV7TN_6VPUwR"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"250"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "KWCzrWFWLV7TN_6VPUwR"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "KWCzrWFWLV7TN_6VPUwR"], ["id", 250], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rebeka@prosacco.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_R9NG4g9YsHgxvGmzEG1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rebeka@prosacco.ca"], ["encrypted_password", "$2a$04$4/s5dq.IeXCywzvywNZJO.CQFxzXwihxv4zCZY40FSnvZKN6xFe/a"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "_R9NG4g9YsHgxvGmzEG1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"251"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_R9NG4g9YsHgxvGmzEG1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "_R9NG4g9YsHgxvGmzEG1"], ["id", 251], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "robert.koelpin@gutkowskibuckridge.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "NTYJZCuGkbjpc_1AqsnU"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "robert.koelpin@gutkowskibuckridge.co.uk"], ["encrypted_password", "$2a$04$nmyw.GfQSXBBDYiUVr9afukw.qFq19LjbaxCBoIr8zOfiPqCk4Vum"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "NTYJZCuGkbjpc_1AqsnU"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"252"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "NTYJZCuGkbjpc_1AqsnU"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "NTYJZCuGkbjpc_1AqsnU"], ["id", 252], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gertrude@lueilwitz.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "6KCzyX4eyYewbSesfRUt"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "gertrude@lueilwitz.co.uk"], ["encrypted_password", "$2a$04$aOA7L1Xu1Trr3TJ3mTXIOOuEuDL8aU0Tpr.sUq7h2mqPTB2UHCqle"], ["created_at", 2016-11-12 01:32:23 UTC], ["updated_at", 2016-11-12 01:32:23 UTC], ["auth_token", "6KCzyX4eyYewbSesfRUt"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"253", "user"=>{}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "amira@dibbert.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "xh71N5duoF8rMk1kJ4Ff"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "amira@dibbert.co.uk"], ["encrypted_password", "$2a$04$9T2HmSO8mSgZFJ6gIVHsfutw.PkAGOA33/9jhLdmVrQz7E/Y.XWTy"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "xh71N5duoF8rMk1kJ4Ff"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"254", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 254], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timmothy_oreilly@douglasschultz.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Uc2dPmo57CMmyQ8SF7Hs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "timmothy_oreilly@douglasschultz.biz"], ["encrypted_password", "$2a$04$lkk3reyXxZEAcRS.I5LOJuCJKp0vV34qwaeuxWBwGh0r7Uv9TLTva"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "Uc2dPmo57CMmyQ8SF7Hs"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"255", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 255], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"casimir@mcclure.name", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "casimir@mcclure.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "p-CBAyrjHBe8m9r_NtTY"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "casimir@mcclure.name"], ["encrypted_password", "$2a$04$VBpAHYMHNJHK6aMKMYj6heNtouvpH2mg5fAGw4ANrqdsWJAxLcu8O"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "p-CBAyrjHBe8m9r_NtTY"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 10ms (Views: 2.5ms | ActiveRecord: 1.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"melvina_morar@friesenbrown.name", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "melvina_morar@friesenbrown.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "S2zrfnVc_Lyy4r8vLvC5"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "melvina_morar@friesenbrown.name"], ["encrypted_password", "$2a$04$ht0hPiOnE24RCECoLM3AoeCoCCgIL/1eYuE0gX43o7MvL81yUJYmq"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "S2zrfnVc_Lyy4r8vLvC5"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jorge@oconner.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BDPyV8PEEFxTzk_BnH6o"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jorge@oconner.us"], ["encrypted_password", "$2a$04$3FjNNl/neN29qLWmuUi6TO28BcAXkmeQADZYg4GHHBsnwFgW4L9.."], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "BDPyV8PEEFxTzk_BnH6o"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"258"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BDPyV8PEEFxTzk_BnH6o"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 258], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "BDPyV8PEEFxTzk_BnH6o"], ["id", 258], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:32:54 UTC], ["id", 258]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maximillia@wolfhartmann.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "85hTQjoNUzkTS-LQnNkz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "maximillia@wolfhartmann.us"], ["encrypted_password", "$2a$04$beFC3FaOljnxlennHgRoFeJaltaYuZwh7hAXqyEntrkqCM0XbA6GS"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "85hTQjoNUzkTS-LQnNkz"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"259"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "85hTQjoNUzkTS-LQnNkz"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 259], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "85hTQjoNUzkTS-LQnNkz"], ["id", 259], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:32:54 UTC], ["id", 259]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rhett@quigley.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "whAG34L4QjkZ8m95_mv7"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rhett@quigley.co.uk"], ["encrypted_password", "$2a$04$NFDyZLt9llNhnS.grjeBKeks77BwJthXoYZU2tDVfRkeGnl7je48W"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "whAG34L4QjkZ8m95_mv7"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"260"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "whAG34L4QjkZ8m95_mv7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "whAG34L4QjkZ8m95_mv7"], ["id", 260], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jack.mcclure@heidenreich.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "1V9bysEDbYtGT-DrR1oE"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jack.mcclure@heidenreich.co.uk"], ["encrypted_password", "$2a$04$HaN9KeuXLp5lNp4SldbAzuG9c5pvGDuOmrXbW2iGjb3a2A6NzfNeS"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "1V9bysEDbYtGT-DrR1oE"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"261"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "1V9bysEDbYtGT-DrR1oE"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "1V9bysEDbYtGT-DrR1oE"], ["id", 261], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lesly_anderson@stracke.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "z2mcN3mNSZWJ-J5kZMLx"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "lesly_anderson@stracke.ca"], ["encrypted_password", "$2a$04$wlztBAlSH26gKOWpgstPOeM27PJDym4S7IK.FqIHwCMbB7r/tfZWa"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "z2mcN3mNSZWJ-J5kZMLx"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"262"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "z2mcN3mNSZWJ-J5kZMLx"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "z2mcN3mNSZWJ-J5kZMLx"], ["id", 262], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lila@wisozksawayn.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "sKQ3txQgewfm-N4sZHyg"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "lila@wisozksawayn.name"], ["encrypted_password", "$2a$04$k8qTGIToZmU2AaliAqAfL.CCi79ST8ofeuPpEEuVhCh/5rU7Os.bi"], ["created_at", 2016-11-12 01:32:54 UTC], ["updated_at", 2016-11-12 01:32:54 UTC], ["auth_token", "sKQ3txQgewfm-N4sZHyg"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"263", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "sKQ3txQgewfm-N4sZHyg"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 263]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 263]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 18ms (ActiveRecord: 2.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zaria.bartoletti@west.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "CTsbTMwXRjkg_MynbG12"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "zaria.bartoletti@west.ca"], ["encrypted_password", "$2a$04$KXmHhZZjpWtFW7FjGcmfCeBRU70fcriDwiPfOyudiSBirhn9hFCca"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "CTsbTMwXRjkg_MynbG12"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"264", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 264], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rogelio@lesch.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_fpeQszW1xph-_tbyKbH"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rogelio@lesch.name"], ["encrypted_password", "$2a$04$VxIghUU92shMT93fMA6YDuhjMUo7C/JXbyZzxb963j/Y5UXgr9/p6"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "_fpeQszW1xph-_tbyKbH"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"265", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 265], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"jude.grady@kubherman.biz", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jude.grady@kubherman.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yvYhNLCr3xjsAUSSyeNV"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jude.grady@kubherman.biz"], ["encrypted_password", "$2a$04$MvR3BW4Cj6M0dnP8z3ZcI.R7wmSBYeFUTTs2ZNygraMeQEGgVVe2i"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "yvYhNLCr3xjsAUSSyeNV"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"tad@murraypacocha.info", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tad@murraypacocha.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "2reDjLsWzdppsxxjJ4rp"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "tad@murraypacocha.info"], ["encrypted_password", "$2a$04$J03tiymnP/XR6BwNOjAhC.nAF3zeWeyr/aOlOZnPwHDvHZDrv5c6a"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "2reDjLsWzdppsxxjJ4rp"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.9ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bradly@shields.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "px83gz4pTxoF8L1TXSZM"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bradly@shields.ca"], ["encrypted_password", "$2a$04$8t9RIyACPVQ9.cUHU9mMNOIJCDOqquncYIwB6EI0pDf85.0JKmSV2"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "px83gz4pTxoF8L1TXSZM"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"268"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "matt_harvey@harber.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "KAUV6XA2y6_6N-cQ2Azh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "matt_harvey@harber.us"], ["encrypted_password", "$2a$04$IjLvn0fD9fMa.tz6qgpz1OG7.2n0J1okceoQxX8zrIcDsxhcRrXza"], ["created_at", 2016-11-12 01:34:18 UTC], ["updated_at", 2016-11-12 01:34:18 UTC], ["auth_token", "KAUV6XA2y6_6N-cQ2Azh"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"269"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mercedes_oconnell@nader.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uswuKtXdYn69VymCy4Zy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "mercedes_oconnell@nader.ca"], ["encrypted_password", "$2a$04$6JTL9oitJE0FZKYNSR60ruDZH1Kpq4QCpnz9Wgfx4tJIlOfZCKIcG"], ["created_at", 2016-11-12 01:34:19 UTC], ["updated_at", 2016-11-12 01:34:19 UTC], ["auth_token", "uswuKtXdYn69VymCy4Zy"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"270"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "matteo@ankunding.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "pgsF8HSWtTrzMhF648sQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "matteo@ankunding.biz"], ["encrypted_password", "$2a$04$kLMtbk4nBF1Ek01Gv4lioODlIFGpzeNZEjEvW5PwQG20/Q1ujFuvG"], ["created_at", 2016-11-12 01:34:19 UTC], ["updated_at", 2016-11-12 01:34:19 UTC], ["auth_token", "pgsF8HSWtTrzMhF648sQ"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"271"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laurine@corkery.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-hy-Go-PsuMJs8AGJmwS"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "laurine@corkery.co.uk"], ["encrypted_password", "$2a$04$JJa5eGVQh9s/qiL2bKVZde69HftQ1pSXyAyG.18ELmdrTzK.eV0RW"], ["created_at", 2016-11-12 01:34:19 UTC], ["updated_at", 2016-11-12 01:34:19 UTC], ["auth_token", "-hy-Go-PsuMJs8AGJmwS"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"272"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "chanel@bernhard.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "LbCyeb6gdTgzhQ1S3mnp"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "chanel@bernhard.name"], ["encrypted_password", "$2a$04$JrJsciKSaopG8i9cYNPsne4NVN5SFQ2jmvf/Ijgi3SoRUPriIy6AK"], ["created_at", 2016-11-12 01:34:19 UTC], ["updated_at", 2016-11-12 01:34:19 UTC], ["auth_token", "LbCyeb6gdTgzhQ1S3mnp"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"273", "user"=>{}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alaina_kovacek@prosacco.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ScpuykhPK8LzbnyYsLzq"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "alaina_kovacek@prosacco.name"], ["encrypted_password", "$2a$04$gumg4.2ia6bEagWFavUk..mLUvm68JE0wyYHx7sIu4iSQIUaWknHG"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "ScpuykhPK8LzbnyYsLzq"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"274", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 274], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maurine@rempel.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wZjycb66ERaHmsdk6Mp8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "maurine@rempel.co.uk"], ["encrypted_password", "$2a$04$X22YfwaGfAxioXYDF1Zf7eS08huivd7jPymz1w/LnYyiLV/j8nBYW"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "wZjycb66ERaHmsdk6Mp8"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"275", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 275], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"jayden_kilback@koch.info", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jayden_kilback@koch.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "enZuxH4_KjU_SRbEGvDG"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jayden_kilback@koch.info"], ["encrypted_password", "$2a$04$esH/G3ADHGKQjkGaaVT5Lu9gReSesjaLZ3a.7jW1e/BTW4UL7TLGu"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "enZuxH4_KjU_SRbEGvDG"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 9ms (Views: 2.6ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"evan.paucek@greenholtbreitenberg.ca", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "evan.paucek@greenholtbreitenberg.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Gskdzye79VzZ6uRHLryf"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "evan.paucek@greenholtbreitenberg.ca"], ["encrypted_password", "$2a$04$eAD2su3OrtpmlE12kTO61eQHEKeYzW0WGbaBTEWIK64nA3sO2awQm"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "Gskdzye79VzZ6uRHLryf"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.7ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jacey_breitenberg@block.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "px3Kpyrxa1uLBytmLtKs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "jacey_breitenberg@block.com"], ["encrypted_password", "$2a$04$sSIJYcIh3tS9zeeojkeCKuuPBi9Go6tL2NASC2QsBBRjhBN7b8RP6"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "px3Kpyrxa1uLBytmLtKs"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"278"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "px3Kpyrxa1uLBytmLtKs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 278], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "px3Kpyrxa1uLBytmLtKs"], ["id", 278], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:34:41 UTC], ["id", 278]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "niko@haag.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "hyz5kaUQzg6YPrD2GfHs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "niko@haag.us"], ["encrypted_password", "$2a$04$dt2FJ0NJLfzcZ/dsfsogm.jj0Hehj.L/vziu6UjUc2zXltVIGMEgS"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "hyz5kaUQzg6YPrD2GfHs"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"279"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "hyz5kaUQzg6YPrD2GfHs"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 279], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "hyz5kaUQzg6YPrD2GfHs"], ["id", 279], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-12 01:34:41 UTC], ["id", 279]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.7ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "devante_hamill@deckow.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_dustz2mYpCv9nGnyjQo"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "devante_hamill@deckow.co.uk"], ["encrypted_password", "$2a$04$CDU7ylC0uK5Mep.LVcje7e3fRGeu.uL.qvOJ0S1h5yBL9dEHsanli"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "_dustz2mYpCv9nGnyjQo"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"280"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_dustz2mYpCv9nGnyjQo"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "_dustz2mYpCv9nGnyjQo"], ["id", 280], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "felix@oberbrunner.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SrX5psiLZFmi4BTBePhW"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "felix@oberbrunner.name"], ["encrypted_password", "$2a$04$RT.7cHzU.kQcHgPqmnZLKuRxYYCjK2zNZWXTHjHCv/0.HOeBbZf0W"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "SrX5psiLZFmi4BTBePhW"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"281"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SrX5psiLZFmi4BTBePhW"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "SrX5psiLZFmi4BTBePhW"], ["id", 281], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "marietta@terryrunolfsson.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "1hvz864Qap3Z2QUVn1xD"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "marietta@terryrunolfsson.com"], ["encrypted_password", "$2a$04$nn7KBUz0ll4gz52O0QEbQe6bPIClHWklUMYxhPmmXUU9xmI0Fjxha"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "1hvz864Qap3Z2QUVn1xD"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"282"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "1hvz864Qap3Z2QUVn1xD"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "1hvz864Qap3Z2QUVn1xD"], ["id", 282], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andre_cassin@kozey.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "gjre8w3Ze_CsvTCkZVs2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "andre_cassin@kozey.co.uk"], ["encrypted_password", "$2a$04$J1XVVK8AWYeTQdlEMVE.OO8yvMhHCC2YVaKcEVi4mTTXaIibTlwQG"], ["created_at", 2016-11-12 01:34:41 UTC], ["updated_at", 2016-11-12 01:34:41 UTC], ["auth_token", "gjre8w3Ze_CsvTCkZVs2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"283", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "gjre8w3Ze_CsvTCkZVs2"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 283]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 283]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 17ms (ActiveRecord: 1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
