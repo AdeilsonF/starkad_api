@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+<<<<<<< HEAD
+=======
+# starkad_api
+>>>>>>> f8f6ad2476c58fbbc9391f5b762e1e31bc139e1f

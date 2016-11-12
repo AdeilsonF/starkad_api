@@ -8,6 +8,7 @@ describe Api::V1::Concerns::Authenticator do
   let(:user) { FactoryGirl.create(:user) }
   let(:authentication) { Authentication.new }
   subject { authentication }
+<<<<<<< HEAD
 
   describe "current_user" do
     context "when correct auth" do
@@ -32,4 +33,6 @@ describe Api::V1::Concerns::Authenticator do
       end
     end
   end
+=======
+>>>>>>> f8f6ad2476c58fbbc9391f5b762e1e31bc139e1f
 end
