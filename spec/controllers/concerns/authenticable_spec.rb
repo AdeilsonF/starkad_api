@@ -8,7 +8,7 @@ describe Api::V1::Concerns::Authenticator do
   let(:user) { FactoryGirl.create(:user) }
   let(:authentication) { Authentication.new }
   subject { authentication }
-<<<<<<< HEAD
+
 
   describe "current_user" do
     context "when correct auth" do
@@ -33,6 +33,21 @@ describe Api::V1::Concerns::Authenticator do
       end
     end
   end
-=======
->>>>>>> f8f6ad2476c58fbbc9391f5b762e1e31bc139e1f
+
+  describe "#auth_with_token" do
+    before do
+      allow(authentication).to receive(:current_user).and_return(nil)
+      allow(response).to receive(:body).and_return({'errors' => 'Not authenticated'}.to_json)
+      allow(response).to receive(:status).and_return(401)
+      allow(authentication).to receive(:response).and_return(response)
+    end
+
+    it "render a json message" do
+      expect(json_response[:errors]).to eq 'Not authenticated'
+    end
+
+    it { expect(response.status).to eq 401}
+  end
+
+
 end

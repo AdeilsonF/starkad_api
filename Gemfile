@@ -28,5 +28,6 @@ group :development do
 end
 
 gem 'devise'
+gem 'rubocop'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

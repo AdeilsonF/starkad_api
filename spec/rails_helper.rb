@@ -18,10 +18,7 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.include Request::JsonHelpers, type: :controller
   config.include Request::SignedRequestHelpers, type: :controller
-<<<<<<< HEAD
   # config.include Request::HeadersHelpers, type: :controller
-=======
->>>>>>> f8f6ad2476c58fbbc9391f5b762e1e31bc139e1f
   config.include Devise::Test::ControllerHelpers, type: :controller
 
 
