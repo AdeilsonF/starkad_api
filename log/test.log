@@ -19723,3 +19723,747 @@ Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
 Completed 204 No Content in 17ms (ActiveRecord: 1.8ms)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "braulio_stokes@schoen.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "2-ttCgxKJSqLux8sKj-C"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "braulio_stokes@schoen.us"], ["encrypted_password", "$2a$04$BZyGDNU/drw/FLhcB1vq2.8ObxwY6xUsYieNCRdY9CsHqbpCJeirK"], ["created_at", 2016-11-12 01:39:04 UTC], ["updated_at", 2016-11-12 01:39:04 UTC], ["auth_token", "2-ttCgxKJSqLux8sKj-C"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "2-ttCgxKJSqLux8sKj-C"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eldred_bayer@mitchell.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yieK5a6s_Jrns33cxLdF"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "eldred_bayer@mitchell.ca"], ["encrypted_password", "$2a$04$ZesIfhuwDAxewQE/d0Dntuq6lOHX0ZUuaVqZOmlr84ogA8WhORFDm"], ["created_at", 2016-11-12 01:53:57 UTC], ["updated_at", 2016-11-12 01:53:57 UTC], ["auth_token", "yieK5a6s_Jrns33cxLdF"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yieK5a6s_Jrns33cxLdF"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rickey.jakubowski@zboncakkovacek.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uNeJ2SV7AskieB2shJA3"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rickey.jakubowski@zboncakkovacek.com"], ["encrypted_password", "$2a$04$kT5i4FsEQgkl0szbTtxKye3zSpgJiqf6Bx4bWrVRKO/iHiFBLUZOC"], ["created_at", 2016-11-12 01:53:59 UTC], ["updated_at", 2016-11-12 01:53:59 UTC], ["auth_token", "uNeJ2SV7AskieB2shJA3"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uNeJ2SV7AskieB2shJA3"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (11.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (46.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "letha@champlin.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (26.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "PfWDhpytJUNq5gfcS_gV"], ["LIMIT", 1]]
+  [1m[35mSQL (26.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "letha@champlin.co.uk"], ["encrypted_password", "$2a$04$R.rIbHB/X26Z5TsLvzw/7uiWbK7CWDcRt8ARamX.prRI/2K85yV5."], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "PfWDhpytJUNq5gfcS_gV"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (36.0ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Output GPS Mount"], ["price", #<BigDecimal:62eb098,'0.9375866086 24186E2',27(36)>], ["user_id", 287], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "larissa_kihn@powlowskikunde.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ALfdUPo6HJgztwyuaUrC"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "larissa_kihn@powlowskikunde.co.uk"], ["encrypted_password", "$2a$04$afI48J9TtwQCKfhNWz0by.O/DTLwLsghtAOdV4kVmmMpHW6ao1sC2"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "ALfdUPo6HJgztwyuaUrC"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#show as HTML
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ALfdUPo6HJgztwyuaUrC"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 1.7ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "orpha@murazik.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3ikmoNjUxFqs7W24wx5b"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "orpha@murazik.biz"], ["encrypted_password", "$2a$04$eedljSpb9eY1Ql0WHg/T/.9uCs.0IPqNaL26bk.zvEMSh6YJX6n8K"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "3ikmoNjUxFqs7W24wx5b"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Input Case"], ["price", #<BigDecimal:64a9f38,'0.4952433007 41323E1',27(36)>], ["user_id", 289], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "margie@olson.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "FHvDTFrz6oiTkAL6TLfP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "margie@olson.us"], ["encrypted_password", "$2a$04$LURvhDvKR0Lzs8cCNfvCWeeUZXu/36pH5TbpqDuR1WL98pkdqcpG2"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "FHvDTFrz6oiTkAL6TLfP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#show as HTML
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "FHvDTFrz6oiTkAL6TLfP"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alexander@nicolasmarvin.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "f6SmysSRhnJC4V_1xP_D"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "alexander@nicolasmarvin.co.uk"], ["encrypted_password", "$2a$04$TKD.RzvjmIKyQwJDAJhT1.ig03iWXDvGuggBLkh8VlUIEijB/WH.K"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "f6SmysSRhnJC4V_1xP_D"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Video Case"], ["price", #<BigDecimal:6628468,'0.5393508616 77491E2',27(36)>], ["user_id", 291], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bethany.hodkiewicz@kunde.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zjjruCj_atmmk2KPKp-y"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "bethany.hodkiewicz@kunde.ca"], ["encrypted_password", "$2a$04$qSrm9ZZ7a0eM1uny78dDNOkWtkrukSXiJgOkDx0LSD5LLv6gAIeCG"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "zjjruCj_atmmk2KPKp-y"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tag Component"], ["price", #<BigDecimal:66e1648,'0.8463276601 39398E2',27(36)>], ["user_id", 292], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "andres@reingerbalistreri.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "LW1PQ1bTGsSuTJDeBofz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "andres@reingerbalistreri.co.uk"], ["encrypted_password", "$2a$04$MXV8h5TTi/149OQ2wP1l0uiTwGGFPR401ktUUzm/fqqUwE8J8952i"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "LW1PQ1bTGsSuTJDeBofz"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Performance Case"], ["price", #<BigDecimal:6777328,'0.2028880328 23356E2',27(36)>], ["user_id", 293], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "darron@abernathy.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "oawjkcEZy5MzxizcKmzq"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "darron@abernathy.info"], ["encrypted_password", "$2a$04$eMaojeQrtIGtbTYkuxeOT.yxl6zbU9GSiA8VD7OzMOjEjBiGT0j8a"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "oawjkcEZy5MzxizcKmzq"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Performance Viewer"], ["price", #<BigDecimal:6827160,'0.3614954290 94264E2',27(36)>], ["user_id", 294], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "berta@boscopollich.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Jf3xNWJ9RWNNRvhQSKyx"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "berta@boscopollich.com"], ["encrypted_password", "$2a$04$aGI1NXhvxcYqckXhqpjJKeONQSnXI6bZT/J4rIjy.fzlI4DULlyX2"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "Jf3xNWJ9RWNNRvhQSKyx"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Jf3xNWJ9RWNNRvhQSKyx"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "cara@metzcasper.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "UdPUKRjTLnKuz_3_boFq"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "cara@metzcasper.co.uk"], ["encrypted_password", "$2a$04$7Ox3Ft.pBvSjJR3jlzj1Ne5ELIyHaBnBTKpiBB5wxG/.jso30A9KC"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "UdPUKRjTLnKuz_3_boFq"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Input Viewer"], ["price", #<BigDecimal:5799910,'0.8245946665 92266E2',27(36)>], ["user_id", 296], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fletcher@batz.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "DzfY58iH31TogmdKZ8f4"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "fletcher@batz.biz"], ["encrypted_password", "$2a$04$1.BIn7un/v/bpYsC1QA.Aee4t9ociXgKvQBYMALUNVCOOlJEoBiSG"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "DzfY58iH31TogmdKZ8f4"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Input Digital System"], ["price", #<BigDecimal:57ed948,'0.1518581381 72245E2',27(36)>], ["user_id", 297], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "robyn_greenfelder@stehrmetz.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-NJQZXPXUqYqy58NA5er"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "robyn_greenfelder@stehrmetz.info"], ["encrypted_password", "$2a$04$npE77mi51GtvGhGY8zhQK.7lv6x6XJWNQfTV42sV7HMvK/6.qBGHa"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "-NJQZXPXUqYqy58NA5er"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tag System"], ["price", #<BigDecimal:584d690,'0.9623012423 68054E2',27(36)>], ["user_id", 298], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ryann_wolff@streichpurdy.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "zuk-45QNaCRa_7tVDjVh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ryann_wolff@streichpurdy.biz"], ["encrypted_password", "$2a$04$wMA.c2GLsxkt1n51W8ydLOFikKbvht/TC8iVJSoleNRT9fopGAFdK"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "zuk-45QNaCRa_7tVDjVh"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Power Tag Case"], ["price", #<BigDecimal:5881c88,'0.2692651181 09048E2',27(36)>], ["user_id", 299], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gay@mertzwalker.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "GhmTy3wXsc_gm2d-fBKj"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "gay@mertzwalker.co.uk"], ["encrypted_password", "$2a$04$Jr7cl071H985/e.uhvQGKu9t4p9XY0JqbPU/zcLAnwgEKq.nf6zVW"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "GhmTy3wXsc_gm2d-fBKj"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "GhmTy3wXsc_gm2d-fBKj"], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laura.bauch@moore.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "A7uogrpY4JNGYp8vDsHk"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "laura.bauch@moore.info"], ["encrypted_password", "$2a$04$9YVfkK40qIDnOp/zWjCB8uVAp5TT5t.JK75CSe5clTvdMBBpNtF02"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "A7uogrpY4JNGYp8vDsHk"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#create as HTML
+  Parameters: {"product"=>{"price"=>"1.3945588280035115", "published"=>"false", "title"=>"Digital System"}, "user_id"=>"301"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "A7uogrpY4JNGYp8vDsHk"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Digital System"], ["price", #<BigDecimal:5aca008,'0.1394558828 0035115E1',27(27)>], ["user_id", 301], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 45ms (Views: 11.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "howard@sanfordbotsford.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3CKfdK8UGiYDqkKkFo_h"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "howard@sanfordbotsford.us"], ["encrypted_password", "$2a$04$ixyXhBAk0cWZXMnGBgzN5O0TWLECHx4pEzj9kOm/gpMoZp7JN00pu"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "3CKfdK8UGiYDqkKkFo_h"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::ProductsController#create as HTML
+  Parameters: {"product"=>{"price"=>"42.30035464394404", "published"=>"false", "title"=>"Output Controller"}, "user_id"=>"302"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3CKfdK8UGiYDqkKkFo_h"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Output Controller"], ["price", #<BigDecimal:59700e0,'0.4230035464 394404E2',27(27)>], ["user_id", 302], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 5ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sophie.krajcik@greenholt.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "BNzsJbxyxxcRy3BE25ze"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "sophie.krajcik@greenholt.us"], ["encrypted_password", "$2a$04$KoOeKRoGM4KF/et1KdKepO8VmX83cVTrC021yiCmulEzRE91vu6OK"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "BNzsJbxyxxcRy3BE25ze"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"sophie.krajcik@greenholt.us", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sophie.krajcik@greenholt.us"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", 2016-11-15 20:30:12 UTC], ["last_sign_in_at", 2016-11-15 20:30:12 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["sign_in_count", 1], ["updated_at", 2016-11-15 20:30:12 UTC], ["id", 303]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "D8eFyLffQLUoFABNoPvr"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "D8eFyLffQLUoFABNoPvr"], ["id", 303], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "auth_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "D8eFyLffQLUoFABNoPvr"], ["id", 303]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 303], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "selena.dicki@wintheiserbartell.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "7xSdjCCtsFE_Y6CdPzCs"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "selena.dicki@wintheiserbartell.com"], ["encrypted_password", "$2a$04$mJbksyYd.kBCWQPRbHcm..oR9J8Zv8z..m36F1PtThjlsay6sDL1e"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "7xSdjCCtsFE_Y6CdPzCs"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"selena.dicki@wintheiserbartell.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "selena.dicki@wintheiserbartell.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", 2016-11-15 20:30:12 UTC], ["last_sign_in_at", 2016-11-15 20:30:12 UTC], ["current_sign_in_ip", "0.0.0.0"], ["last_sign_in_ip", "0.0.0.0"], ["sign_in_count", 1], ["updated_at", 2016-11-15 20:30:12 UTC], ["id", 304]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "GjbaC1SWFzgMdcQ537yt"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "GjbaC1SWFzgMdcQ537yt"], ["id", 304], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "auth_token" = $2 WHERE "users"."id" = $3[0m  [["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "GjbaC1SWFzgMdcQ537yt"], ["id", 304]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 10ms (Views: 0.8ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loyal@flatley.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "chU9qzFYDpxWZkv9F1sQ"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "loyal@flatley.info"], ["encrypted_password", "$2a$04$CdjlxheJ9dlKkgp1sfje5OXi6ouHyrSB4xUKbCWczSUfg.Kpvvbce"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "chU9qzFYDpxWZkv9F1sQ"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"loyal@flatley.info", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loyal@flatley.info"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stanton_lang@boyle.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "aS81BLPEGL8RzfpafgCn"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "stanton_lang@boyle.co.uk"], ["encrypted_password", "$2a$04$oz5PPa1bveahJDb52yDXlevxY2QeD6GkTcu96K1KMBqkePJBZ9XaW"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "aS81BLPEGL8RzfpafgCn"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#create as JSON
+  Parameters: {"session"=>{"email"=>"stanton_lang@boyle.co.uk", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "stanton_lang@boyle.co.uk"], ["LIMIT", 1]]
+Completed 422 Unprocessable Entity in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "laurine@beier.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "37zujhj3zEdy3GCZCzUy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "laurine@beier.us"], ["encrypted_password", "$2a$04$msZUDC7ktcrEOC5Ghcxkbu9jO7H2.lr.t9zZkV8uMb.G2ZY9DNoRS"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "37zujhj3zEdy3GCZCzUy"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::SessionsController#destroy as HTML
+  Parameters: {"id"=>"307"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "37zujhj3zEdy3GCZCzUy"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "rBgEwkbjt3zQn7nKBUgW"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "rBgEwkbjt3zQn7nKBUgW"], ["id", 307], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "auth_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["auth_token", "rBgEwkbjt3zQn7nKBUgW"], ["updated_at", 2016-11-15 20:30:12 UTC], ["id", 307]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "melany.veum@brakus.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "L-q4egySwvRBikpEKDRj"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "melany.veum@brakus.ca"], ["encrypted_password", "$2a$04$BJMs3t7QuQ.nWU6wgpuwhOR3tsXyNL4kYu/oIt9oDN5oyHCkqGPZS"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "L-q4egySwvRBikpEKDRj"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"308", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 308], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thad.sauer@mcdermotternser.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "n5spQ_-TJMvXen1kAJ3K"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "thad.sauer@mcdermotternser.ca"], ["encrypted_password", "$2a$04$PBQJNU4BjW0T57JU9Hb3KuJYgqT6IqmByRBpQYuzbrT2AXIZgHCH."], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "n5spQ_-TJMvXen1kAJ3K"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"309", "user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 309], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"tad@kohlerblanda.us", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tad@kohlerblanda.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "5CFyRAjnUVHXyry47j2v"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "tad@kohlerblanda.us"], ["encrypted_password", "$2a$04$DwKgnzdG9eABOL5tt/2CvOLWdvEuCH9XGJOEkx/jR/ey5U5hPmn1a"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "5CFyRAjnUVHXyry47j2v"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 8ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"justyn@frami.name", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "justyn@frami.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "SeyKe4sescu82-yzko75"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "justyn@frami.name"], ["encrypted_password", "$2a$04$liV4LVJgUZB9LKi743c65e3MFB.d3CHG9wxf.exCR/KgI0FTu6icy"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "SeyKe4sescu82-yzko75"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 52ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+Processing by Api::V1::UsersController#create as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vinnie.smith@kirlin.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "VuNhZyEx3jub_KoNKWxA"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "vinnie.smith@kirlin.info"], ["encrypted_password", "$2a$04$lV4MlLbHlliqIvcs3LufWOePEIGq0ylGVO4PEqNVZ0u3paQ7/dD8G"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "VuNhZyEx3jub_KoNKWxA"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"312"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "VuNhZyEx3jub_KoNKWxA"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 312], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "VuNhZyEx3jub_KoNKWxA"], ["id", 312], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-15 20:30:12 UTC], ["id", 312]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 6ms (Views: 0.8ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mavis@bernier.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "j1zaazdyGpx53QL7eMbP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "mavis@bernier.biz"], ["encrypted_password", "$2a$04$aAkcw9Tbu90kE5txmfYULe486ug8h70Gi3AbLwoR1dp1BikAC83dm"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "j1zaazdyGpx53QL7eMbP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>"novoemail@mail.com"}, "id"=>"313"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "j1zaazdyGpx53QL7eMbP"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "novoemail@mail.com"], ["id", 313], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "j1zaazdyGpx53QL7eMbP"], ["id", 313], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "email" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["email", "novoemail@mail.com"], ["updated_at", 2016-11-15 20:30:12 UTC], ["id", 313]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "roma@prohaskawelch.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-ssZkzKVrNi1nypsfQBc"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "roma@prohaskawelch.info"], ["encrypted_password", "$2a$04$UpnCZmasdl2dvhauvoRkQOeORlwFJzONRf1a2ylTL1gMaklwjGOby"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "-ssZkzKVrNi1nypsfQBc"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"314"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "-ssZkzKVrNi1nypsfQBc"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "-ssZkzKVrNi1nypsfQBc"], ["id", 314], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "shirley_becker@harber.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ygH6BMyx_mohV6K5qcGL"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "shirley_becker@harber.biz"], ["encrypted_password", "$2a$04$MHW1Hm0.cq/Jp.c7fCPyNuCCp4k/mP.yMRYaoa1lmXytqQC0jROMm"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "ygH6BMyx_mohV6K5qcGL"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"315"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ygH6BMyx_mohV6K5qcGL"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "ygH6BMyx_mohV6K5qcGL"], ["id", 315], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "aidan_kassulke@ortizbuckridge.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "M2Qb_mxWfb5xZPNhXoTy"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "aidan_kassulke@ortizbuckridge.com"], ["encrypted_password", "$2a$04$bb8DTMaN.t9/XsefhUb83eM9djW6szWVQY75leOtgaaH0JXGGKEkq"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "M2Qb_mxWfb5xZPNhXoTy"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#update as application/vnd.starkadapi.v1
+  Parameters: {"user"=>{"email"=>""}, "id"=>"316"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "M2Qb_mxWfb5xZPNhXoTy"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["auth_token", "M2Qb_mxWfb5xZPNhXoTy"], ["id", 316], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "alexander@jast.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yFddmQVjTh-Pt7XyvKwP"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "alexander@jast.us"], ["encrypted_password", "$2a$04$my/Vvfw6tsv3QrSuvwQw5O3jzBvtfYglW6sRbJiMAy4GZXQ4S6qky"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "yFddmQVjTh-Pt7XyvKwP"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Api::V1::UsersController#destroy as application/vnd.starkadapi.v1
+  Parameters: {"id"=>"317", "user"=>{}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "yFddmQVjTh-Pt7XyvKwP"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 317]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 317]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "margarette.muller@breitenberg.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Qwq6mxzeh7QSkpRosVqf"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "margarette.muller@breitenberg.ca"], ["encrypted_password", "$2a$04$I6uDyvhi46IFY2SeQ2bhieeeoKbcUYAp3M5knhsj0EfJgQfgNfTP6"], ["created_at", 2016-11-15 20:30:12 UTC], ["updated_at", 2016-11-15 20:30:12 UTC], ["auth_token", "Qwq6mxzeh7QSkpRosVqf"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Qwq6mxzeh7QSkpRosVqf"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johnathan_johnston@marvin.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "gvjXaV6mPoMzCYdKp-Kw"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "johnathan_johnston@marvin.info"], ["encrypted_password", "$2a$04$3kG/PmUztIURoMK67aaqa.rBYemy/en82DT3xTxQrFVzSu4YIGj0K"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "gvjXaV6mPoMzCYdKp-Kw"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "conrad@bednar.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Dm1MRrGx8Z-sPHRmTges"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "conrad@bednar.co.uk"], ["encrypted_password", "$2a$04$czPsDF4s8OXd6QXgvIUIxOCNvFipS6C4S30hZxLM/Tu0umeNUEeOu"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "Dm1MRrGx8Z-sPHRmTges"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rosanna.davis@cormier.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "_xwUUmoHxUxvhF46W8Ee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rosanna.davis@cormier.info"], ["encrypted_password", "$2a$04$nMe2QjiRnIWPHvdV7NVPpuDoODtX63ydjhKvXv8fs84w2K8Znyywe"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "_xwUUmoHxUxvhF46W8Ee"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sydnie.becker@hyatt.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "N4EVQykNtRzzF9JpFsu-"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "sydnie.becker@hyatt.us"], ["encrypted_password", "$2a$04$STh2RW4xuxLaRyXLYK2.4.PmZjQ5t7J3bsmlH9rA8PKOdeTUyBDDy"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "N4EVQykNtRzzF9JpFsu-"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ciara_ritchie@turcotte.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "vy1aKebAnXiVJNSL_-gN"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "ciara_ritchie@turcotte.us"], ["encrypted_password", "$2a$04$Ns3LP6rf6Em1n2dQP9lppuuZeRqo3HFtKoVOb7paom3HsDOgLv7tO"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "vy1aKebAnXiVJNSL_-gN"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "haskell.hackett@connelly.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "TfuFVRLeGKYT7oyAWjRF"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "haskell.hackett@connelly.info"], ["encrypted_password", "$2a$04$wS3hFSRYsTkwUvwlfgwyVOZe7BiW7D7Pfd6wE0MHD7tLaYMDbIO9C"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "TfuFVRLeGKYT7oyAWjRF"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "foster.satterfield@cole.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3XtchLDgVzVs8cwss-KR"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "foster.satterfield@cole.info"], ["encrypted_password", "$2a$04$Cty6m8YQxVHdD.ofghjyP.rZJ3Ol8mBVKVkw4TEVODtr/UOC6.2UW"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "3XtchLDgVzVs8cwss-KR"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "rosanna@skilesrunte.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ynXm1pE7QtqLmbUwfG8N"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "rosanna@skilesrunte.info"], ["encrypted_password", "$2a$04$vt8sOHwrD/KuA3tprbiouOLrLvsJ820V8lldpTWY4OtBQ57EbBJOK"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "ynXm1pE7QtqLmbUwfG8N"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "reva_little@hackett.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "fKrS6foj4j3CUAyjBauh"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "reva_little@hackett.co.uk"], ["encrypted_password", "$2a$04$vgaDIT8eOE3vunmAlAkk6.BpCz4DcEAV4RDQWJDaT.00DBiYfecjG"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "fKrS6foj4j3CUAyjBauh"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "randy@kutch.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "conor@mcclure.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "conor@mcclure.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "conor@mcclure.info"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3Ey6FrTns1N-NjVHM-7V"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "krista_goldner@pacochatowne.name"], ["encrypted_password", "$2a$04$vwQnZfv0AHv5I8pT/Nig7eYWbCzT72v4TPssirghX7PyvsdlljhPy"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "3Ey6FrTns1N-NjVHM-7V"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "krista_goldner@pacochatowne.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3Ey6FrTns1N-NjVHM-7V"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "krista_goldner@pacochatowne.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "3eY6fRtNS1n-nJvhm-7v"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "frederique@gusikowskifriesen.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uniquetoken"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "frederique@gusikowskifriesen.name"], ["encrypted_password", "$2a$04$7dTGW1FnYM8lUlTozn4NBuSIdqOAVcuEks9/Sq42djVi00hcF7RXu"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "uniquetoken"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brad.terry@lockman.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uniquetoken"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "brad.terry@lockman.name"], ["encrypted_password", "$2a$04$pDx9/X6kmPr0RfIKJAJRXefL45tkzysuDRKuTd9quDViMR3Jc7YNe"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "uniquetoken"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "eladio.johnson@terry.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "uniquetoken"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "newuniquetoken"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "eladio.johnson@terry.biz"], ["encrypted_password", "$2a$04$A4OZN7EnPXGf4c0ueETJUeeXvsT0XntJ5XMMtyrZLYHZjsG4gU8kC"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "newuniquetoken"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "lelia_considine@howe.ca"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "TKNWxxvLJ6AuZqJF5Uzt"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "lelia_considine@howe.ca"], ["encrypted_password", "$2a$04$BUORNhHfBUFadZFRhi/kBeQWILZ7JLNU1pzppB6dh2mAh5Qi6nk3a"], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC], ["auth_token", "TKNWxxvLJ6AuZqJF5Uzt"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Digital Power Amplifier"], ["price", #<BigDecimal:457c2c8,'0.3753715332 57369E2',27(36)>], ["user_id", 332], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Remote Direct Compressor"], ["price", #<BigDecimal:4592230,'0.6287654197 92757E2',27(36)>], ["user_id", 332], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "products" ("title", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Disc Electric Receiver"], ["price", #<BigDecimal:45c5d10,'0.7206020286 18538E2',27(36)>], ["user_id", 332], ["created_at", 2016-11-15 20:30:13 UTC], ["updated_at", 2016-11-15 20:30:13 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."user_id" = $1[0m  [["user_id", 332]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 73]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 74]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = $1[0m  [["id", 75]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 332]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "monserrate@wolff.name"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "8f2FQuYQUzEU2Q2toZxY"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "monserrate@wolff.name"], ["encrypted_password", "$2a$04$Wz0m.4Ks0r0f1PzaQVNF1.sYkyTv2JfAWRuX8WQ3dggTdbHZF.4n."], ["created_at", 2016-11-15 20:30:26 UTC], ["updated_at", 2016-11-15 20:30:26 UTC], ["auth_token", "8f2FQuYQUzEU2Q2toZxY"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "8f2FQuYQUzEU2Q2toZxY"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anahi_kovacek@daughertydietrich.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "iv6AgemwBrSnfKMYU_zz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "anahi_kovacek@daughertydietrich.com"], ["encrypted_password", "$2a$04$cX2zwKkOEiRfu10drcLpoudlNmbnH.9Y9kB5dmE.u7yv6XQ2fbd62"], ["created_at", 2016-11-15 20:30:51 UTC], ["updated_at", 2016-11-15 20:30:51 UTC], ["auth_token", "iv6AgemwBrSnfKMYU_zz"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "iv6AgemwBrSnfKMYU_zz"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nicholaus.morar@effertz.us"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ffQgqxgVNrqQV3DBkHtC"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "nicholaus.morar@effertz.us"], ["encrypted_password", "$2a$04$ygBhIGurqzFzdn3EpTpjcuSPZVO1/ortZJTnDem8Fywf7uk.6Ql0."], ["created_at", 2016-11-15 20:34:06 UTC], ["updated_at", 2016-11-15 20:34:06 UTC], ["auth_token", "ffQgqxgVNrqQV3DBkHtC"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "ffQgqxgVNrqQV3DBkHtC"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "elna_gislason@mckenziehegmann.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "S-hGxjPckX_8oznLjZX8"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "elna_gislason@mckenziehegmann.biz"], ["encrypted_password", "$2a$04$ymPwVCvkGLHMq4SVR9VUt.NVDHe2VqidUotdsCkwg4u5pvkWJ.P3C"], ["created_at", 2016-11-15 20:34:06 UTC], ["updated_at", 2016-11-15 20:34:06 UTC], ["auth_token", "S-hGxjPckX_8oznLjZX8"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "quinton_bahringer@crona.co.uk"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "u6ayDxYg1GVP6cpSbaq1"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "quinton_bahringer@crona.co.uk"], ["encrypted_password", "$2a$04$vUgdP2/jK2ed8qcy4NbRMOM/XBVHxAhq6QwaqFKNXEeEdUdniGs2S"], ["created_at", 2016-11-15 20:36:52 UTC], ["updated_at", 2016-11-15 20:36:52 UTC], ["auth_token", "u6ayDxYg1GVP6cpSbaq1"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "u6ayDxYg1GVP6cpSbaq1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "wrong_token"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kailee_smitham@wintheisersmitham.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."auth_token" = $1 LIMIT $2[0m  [["auth_token", "Jv9dAciqvUhAqyx7abPx"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "auth_token") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "kailee_smitham@wintheisersmitham.com"], ["encrypted_password", "$2a$04$m3tsx5.LFpcK27BwUOHobOCzSvl92ppyYpiwspsqEJ0ua5eUN3PO6"], ["created_at", 2016-11-15 20:36:52 UTC], ["updated_at", 2016-11-15 20:36:52 UTC], ["auth_token", "Jv9dAciqvUhAqyx7abPx"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

@@ -5,6 +5,12 @@ module Request
     end
   end
 
+  module HeadersHelpers
+    def api_authorization_header(token)
+      request.headers['Authorization'] = token
+    end
+  end
+
   module SignedRequestHelpers
     def current_user
       @user ||= try(:user) || FactoryGirl.create(:user)

@@ -13,7 +13,7 @@ describe Api::V1::Concerns::Authenticator do
   describe "current_user" do
     context "when correct auth" do
       before do
-        request.headers['Authorization'] = user.auth_token
+        api_authorization_header user.auth_token
         allow(authentication).to receive(:request).and_return(request)
       end
 
@@ -24,7 +24,7 @@ describe Api::V1::Concerns::Authenticator do
 
     context "when wrong auth" do
       before do
-        request.headers['Authorization'] = 'wrong_token'
+        api_authorization_header 'wrong_token'
         allow(authentication).to receive(:request).and_return(request)
       end
 
@@ -47,6 +47,25 @@ describe Api::V1::Concerns::Authenticator do
     end
 
     it { expect(response.status).to eq 401}
+  end
+
+  describe "#user_signed_in?" do
+    context 'when there is a user on a session' do
+      before do
+        allow(authentication).to receive(:current_user).and_return(user)
+      end
+
+      it { should be_user_signed_in}
+    end
+
+
+    context "when there is no user on 'session'" do
+      before do
+        allow(authentication).to receive(:current_user).and_return(nil)
+      end
+
+      it { should_not be_user_signed_in}
+    end
   end
 
 

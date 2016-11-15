@@ -13,7 +13,8 @@ module Api
         end
 
         def auth_with_token!
-          head :unauthorized unless user_signed_in?
+          render json: { errors: "Not authenticated"},
+            status: :unauthorized unless user_signed_in?
         end
       end
     end
