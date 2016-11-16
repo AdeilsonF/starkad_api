@@ -13,11 +13,12 @@ gem 'pg'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '~> 3.5'
   gem "factory_girl_rails"
   gem 'ffaker'
   gem 'shoulda-matchers', '~> 3.0'
+  gem 'rspec-rails', '~> 3.5'
 end
+
 
 group :development do
   gem 'web-console'
@@ -29,5 +30,6 @@ end
 
 gem 'devise'
 gem 'rubocop'
+gem 'active_model_serializers'
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

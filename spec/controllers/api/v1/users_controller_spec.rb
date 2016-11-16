@@ -3,6 +3,7 @@ require 'rails_helper'
 describe Api::V1::UsersController, type: :controller do
   before(:each) {request.headers['Accept'] = "application/vnd.starkadapi.v1, #{Mime::JSON}"}
   before(:each){request.headers['Content-Type'] = Mime::JSON.to_s}
+  
   describe "GET #show" do
     before(:each) do
       @user = FactoryGirl.create :user
@@ -13,12 +14,7 @@ describe Api::V1::UsersController, type: :controller do
       expect(json_response[:email]).to eql @user.email
     end
     it {should respond_with 200}
-
-
-
   end
-
-
 
   describe "POST #create" do
     context "when is successfully created" do
@@ -59,7 +55,7 @@ describe Api::V1::UsersController, type: :controller do
   describe "PUT/PATCH #update" do
     before(:each) do
       @user = FactoryGirl.create(:user)
-      request.headers['Authorization'] = @user.auth_token
+      api_authorization_header @user.auth_token
     end
 
     context "when user is successfully updated" do
@@ -99,7 +95,7 @@ describe Api::V1::UsersController, type: :controller do
   describe "DELETE #destroy" do
     before(:each) do
       @user = FactoryGirl.create(:user)
-      request.headers['Authorization'] = @user.auth_token
+      api_authorization_header @user.auth_token
       delete :destroy, {id: @user.id}, format: :json
     end
     it {should respond_with 204}

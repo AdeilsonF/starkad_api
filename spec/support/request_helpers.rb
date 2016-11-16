@@ -5,7 +5,7 @@ module Request
     end
   end
 
-  module HeadersHelpers
+    module HeadersHelpers
     def api_authorization_header(token)
       request.headers['Authorization'] = token
     end
