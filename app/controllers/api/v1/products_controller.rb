@@ -5,7 +5,7 @@ module Api
       # skip_before_action :auth_with_token!, only: [:show]
 
       def index
-       products = Product.all
+       products = Product.search(params)
        render json: products
       end
 
@@ -48,5 +48,4 @@ module Api
       end
     end
   end
-  
 end
