@@ -44,6 +44,7 @@ describe Api::V1::ProductsController do
         expect(json_response[:title]).to eql @product_attributes[:title]
       end
 
+
       it { should respond_with 201 }
     end
 
