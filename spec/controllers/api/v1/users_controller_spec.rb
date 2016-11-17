@@ -7,12 +7,13 @@ describe Api::V1::UsersController, type: :controller do
   describe "GET #show" do
     before(:each) do
       @user = FactoryGirl.create :user
-      get :show, id: @user.id, format: :json
+      get :show, params: {id: @user.id}, format: :json
     end
 
     it "returns the information about a reporter on a hash" do
       expect(json_response[:email]).to eql @user.email
     end
+
     it {should respond_with 200}
   end
 
@@ -20,7 +21,7 @@ describe Api::V1::UsersController, type: :controller do
     context "when is successfully created" do
       before(:each) do
         @user_attributes = FactoryGirl.attributes_for :user
-        post :create, {user: @user_attributes}, format: :json
+        post :create, params: {user: @user_attributes}, format: :json
       end
 
       it "renders the json representation for the user record just created" do
@@ -37,7 +38,7 @@ describe Api::V1::UsersController, type: :controller do
         # warning i'm not including the email
         @invalid_user_attributes = {password: "12345",
                                     password_confirmation: "12345"}
-        post :create, {user: @invalid_user_attributes}, format: :json
+        post :create, params: {user: @invalid_user_attributes}, format: :json
       end
 
       it "renders an errors json" do
@@ -61,7 +62,7 @@ describe Api::V1::UsersController, type: :controller do
     context "when user is successfully updated" do
       before(:each) do
         patch :update,
-          {id: @user.id, user: {email: "novoemail@mail.com"}},
+          params: {id: @user.id, user: {email: "novoemail@mail.com"}},
           format: :json
       end
 
@@ -75,7 +76,7 @@ describe Api::V1::UsersController, type: :controller do
     context "when is not updated" do
       before(:each) do
         patch :update,
-          {id: @user.id, user: {email: ""}},
+          params: {id: @user.id, user: {email: ""}},
           format: :json
       end
 
